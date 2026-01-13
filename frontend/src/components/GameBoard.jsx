@@ -28,6 +28,7 @@ export const GameBoard = () => {
     if (gameState === 'playing') {
       initLevel();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [level, gameState]);
 
   useEffect(() => {
