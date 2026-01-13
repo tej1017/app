@@ -19,58 +19,164 @@ code {
 
 @layer base {
     :root {
-        --background: 0 0% 100%;
-        --foreground: 0 0% 3.9%;
+        /* Vibrant game color palette - energetic and engaging */
+        --background: 250 100% 98%;
+        --foreground: 250 15% 15%;
         --card: 0 0% 100%;
-        --card-foreground: 0 0% 3.9%;
+        --card-foreground: 250 15% 15%;
         --popover: 0 0% 100%;
-        --popover-foreground: 0 0% 3.9%;
-        --primary: 0 0% 9%;
-        --primary-foreground: 0 0% 98%;
-        --secondary: 0 0% 96.1%;
-        --secondary-foreground: 0 0% 9%;
-        --muted: 0 0% 96.1%;
-        --muted-foreground: 0 0% 45.1%;
-        --accent: 0 0% 96.1%;
-        --accent-foreground: 0 0% 9%;
+        --popover-foreground: 250 15% 15%;
+        
+        /* Primary: Vibrant Purple for main actions */
+        --primary: 270 75% 60%;
+        --primary-foreground: 0 0% 100%;
+        --primary-glow: 270 75% 70%;
+        
+        /* Secondary: Bright Teal for secondary actions */
+        --secondary: 180 70% 50%;
+        --secondary-foreground: 0 0% 100%;
+        
+        /* Accent: Energetic Orange for highlights */
+        --accent: 30 95% 60%;
+        --accent-foreground: 0 0% 100%;
+        
+        /* Muted areas */
+        --muted: 250 20% 96%;
+        --muted-foreground: 250 10% 45%;
+        
+        /* Success: Bright Green */
+        --success: 145 65% 50%;
+        --success-foreground: 0 0% 100%;
+        
+        /* Warning: Warm Yellow */
+        --warning: 45 95% 60%;
+        --warning-foreground: 250 15% 15%;
+        
+        /* Destructive */
         --destructive: 0 84.2% 60.2%;
         --destructive-foreground: 0 0% 98%;
-        --border: 0 0% 89.8%;
-        --input: 0 0% 89.8%;
-        --ring: 0 0% 3.9%;
-        --chart-1: 12 76% 61%;
-        --chart-2: 173 58% 39%;
-        --chart-3: 197 37% 24%;
-        --chart-4: 43 74% 66%;
-        --chart-5: 27 87% 67%;
-        --radius: 0.5rem;
+        
+        /* Borders and inputs */
+        --border: 250 20% 88%;
+        --input: 250 20% 92%;
+        --ring: 270 75% 60%;
+        
+        /* Game-specific colors */
+        --game-bg: 250 100% 98%;
+        --bottle-border: 250 15% 25%;
+        
+        /* Gradients for gamification */
+        --gradient-game: linear-gradient(135deg, hsl(270 75% 65%), hsl(180 70% 55%));
+        --gradient-success: linear-gradient(135deg, hsl(145 65% 55%), hsl(180 70% 50%));
+        --gradient-achievement: linear-gradient(135deg, hsl(45 95% 65%), hsl(30 95% 65%));
+        
+        /* Shadows for depth */
+        --shadow-sm: 0 2px 8px hsl(250 50% 20% / 0.08);
+        --shadow-md: 0 4px 16px hsl(250 50% 20% / 0.12);
+        --shadow-lg: 0 8px 32px hsl(250 50% 20% / 0.16);
+        --shadow-glow: 0 0 24px hsl(270 75% 60% / 0.3);
+        
+        /* Animations */
+        --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        --transition-bounce: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        
+        --radius: 1rem;
     }
+    
     .dark {
-        --background: 0 0% 3.9%;
-        --foreground: 0 0% 98%;
-        --card: 0 0% 3.9%;
-        --card-foreground: 0 0% 98%;
-        --popover: 0 0% 3.9%;
-        --popover-foreground: 0 0% 98%;
-        --primary: 0 0% 98%;
-        --primary-foreground: 0 0% 9%;
-        --secondary: 0 0% 14.9%;
-        --secondary-foreground: 0 0% 98%;
-        --muted: 0 0% 14.9%;
-        --muted-foreground: 0 0% 63.9%;
-        --accent: 0 0% 14.9%;
-        --accent-foreground: 0 0% 98%;
+        --background: 250 20% 8%;
+        --foreground: 250 10% 95%;
+        --card: 250 15% 12%;
+        --card-foreground: 250 10% 95%;
+        --popover: 250 15% 12%;
+        --popover-foreground: 250 10% 95%;
+        
+        --primary: 270 75% 65%;
+        --primary-foreground: 0 0% 100%;
+        --primary-glow: 270 75% 75%;
+        
+        --secondary: 180 65% 55%;
+        --secondary-foreground: 0 0% 100%;
+        
+        --accent: 30 90% 65%;
+        --accent-foreground: 0 0% 100%;
+        
+        --muted: 250 15% 18%;
+        --muted-foreground: 250 10% 60%;
+        
+        --success: 145 60% 55%;
+        --success-foreground: 0 0% 100%;
+        
+        --warning: 45 90% 65%;
+        --warning-foreground: 250 15% 15%;
+        
         --destructive: 0 62.8% 30.6%;
         --destructive-foreground: 0 0% 98%;
-        --border: 0 0% 14.9%;
-        --input: 0 0% 14.9%;
-        --ring: 0 0% 83.1%;
-        --chart-1: 220 70% 50%;
-        --chart-2: 160 60% 45%;
-        --chart-3: 30 80% 55%;
-        --chart-4: 280 65% 60%;
-        --chart-5: 340 75% 55%;
+        
+        --border: 250 15% 20%;
+        --input: 250 15% 18%;
+        --ring: 270 75% 65%;
+        
+        --game-bg: 250 20% 8%;
+        --bottle-border: 250 10% 85%;
+        
+        --shadow-sm: 0 2px 8px hsl(0 0% 0% / 0.3);
+        --shadow-md: 0 4px 16px hsl(0 0% 0% / 0.4);
+        --shadow-lg: 0 8px 32px hsl(0 0% 0% / 0.5);
+        --shadow-glow: 0 0 24px hsl(270 75% 65% / 0.4);
     }
+}
+
+/* Custom animations for game */
+@keyframes bottle-pour {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes bounce-in {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    75% { transform: translateX(4px); }
+}
+
+@keyframes level-complete {
+    0% { transform: scale(1) rotate(0deg); }
+    25% { transform: scale(1.2) rotate(5deg); }
+    50% { transform: scale(1.1) rotate(-5deg); }
+    75% { transform: scale(1.2) rotate(3deg); }
+    100% { transform: scale(1) rotate(0deg); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.animate-bottle-pour {
+    animation: bottle-pour 0.4s ease-in-out;
+}
+
+.animate-bounce-in {
+    animation: bounce-in 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.animate-shake {
+    animation: shake 0.4s ease-in-out;
+}
+
+.animate-level-complete {
+    animation: level-complete 0.6s ease-in-out;
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
 }
 
 @layer base {
