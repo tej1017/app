@@ -1,1 +1,2 @@
-# Here are your Instructions
+I built a comprehensive bottle sorting game where players tap to select bottles and pour colors to sort them correctly. It includes progressive difficulty, a hint system, and undo/reset so the game feels fair and addictive.
+To make it more engaging (and not just another clone), I added educational quizzes that reward bonus scoring. The UI is vibrant and responsive, so it plays smoothly on both desktop and mobile.
